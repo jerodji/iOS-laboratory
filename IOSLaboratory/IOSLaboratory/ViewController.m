@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "DispatchTest.h"
 
 @interface ViewController ()
 
@@ -20,6 +21,9 @@
 
 - (IBAction)btnAction:(UIButton *)sender {
     NSLog(@"%s",__func__);
+    
+    [DispatchTest begin];
 }
+
 
 @end

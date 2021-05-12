@@ -115,6 +115,7 @@
 		FA2817CA263A5D2700402BA7 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2817BF263A5D2700402BA7 /* YYClassInfo.m */; };
 		FA2817CB263A5D2700402BA7 /* ymREADME.md in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C1263A5D2700402BA7 /* ymREADME.md */; };
 		FA2817CC263A5D2700402BA7 /* ymLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C2263A5D2700402BA7 /* ymLICENSE */; };
+		FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA64CF65264B6C19000B9FDB /* DispatchTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -351,6 +352,8 @@
 		FA2817C0263A5D2700402BA7 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		FA2817C1263A5D2700402BA7 /* ymREADME.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ymREADME.md; sourceTree = "<group>"; };
 		FA2817C2263A5D2700402BA7 /* ymLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ymLICENSE; sourceTree = "<group>"; };
+		FA64CF64264B6C19000B9FDB /* DispatchTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchTest.h; sourceTree = "<group>"; };
+		FA64CF65264B6C19000B9FDB /* DispatchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,6 +516,8 @@
 				FA28162B263A535000402BA7 /* SceneDelegate.m */,
 				FA28162D263A535000402BA7 /* ViewController.h */,
 				FA28162E263A535000402BA7 /* ViewController.m */,
+				FA64CF64264B6C19000B9FDB /* DispatchTest.h */,
+				FA64CF65264B6C19000B9FDB /* DispatchTest.m */,
 				FA281630263A535000402BA7 /* Main.storyboard */,
 				FA281633263A535200402BA7 /* Assets.xcassets */,
 				FA281635263A535200402BA7 /* LaunchScreen.storyboard */,
@@ -946,6 +951,7 @@
 				FA281771263A5C6500402BA7 /* SDMemoryCache.m in Sources */,
 				FA281775263A5C6500402BA7 /* SDWebImageError.m in Sources */,
 				FA28178D263A5C6500402BA7 /* SDWebImageDefine.m in Sources */,
+				FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */,
 				FA281796263A5C6500402BA7 /* SDImageAssetManager.m in Sources */,
 				FA2816A2263A581100402BA7 /* AFURLSessionManager.m in Sources */,
 				FA2816BF263A5C4000402BA7 /* UILabel+LineSpaceOrWordSpace.m in Sources */,
