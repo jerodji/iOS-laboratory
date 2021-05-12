@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  IOSLaboratory
+//
+//  Created by Jerod on 2021/5/12.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef DEBUG
+#define NSLog(...) printf("%s(%d): %s\n",__FUNCTION__,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
+#else
+#define NSLog(s, ...)
+#endif
+
+
+
+#endif /* PrefixHeader_pch */
