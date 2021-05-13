@@ -1,9 +1,3 @@
-//
-//  DispatchTest.m
-//  IOSLaboratory
-//
-//  Created by Jerod on 2021/5/12.
-//
 
 #import "DispatchTest.h"
 #import "AFNetworking.h"
@@ -21,8 +15,8 @@
 //    dispatch_queue_set_specific(dispatch_get_global_queue(0, 0), GLOBAL_QUEUE, &GLOBAL_QUEUE, nil);
     
     DispatchTest *s = [[self alloc] init];
-    s.total = 20;
-    [s saleTicket_safe];
+    s.total = 50;
+    [s saleTicket_safe_three];
 }
 
 // MARK: - 线程安全 多读单写, 售卖火车票
@@ -105,7 +99,7 @@
 //    -[DispatchTest saleTicket_safe]_block_invoke_2(77): 2 剩余: 0
 }
 - (void)sale {
-    while (self.total >= 0) {
+    while (self.total > 0) {
         dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER); //信号量-1=0,第1个线程进入执行操作,其它线程过来再-1=-1,等待
         NSLog(@"剩余: %ld", (long)self.total);
         self.total--;
@@ -113,7 +107,39 @@
     }
 }
 
-
+- (void)saleTicket_safe_three {
+    
+    dispatch_queue_t que1 = dispatch_queue_create("beijing", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t que2 = dispatch_queue_create("shanghai", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t que3 = dispatch_queue_create("jiangsu", DISPATCH_QUEUE_SERIAL);
+    
+    self.semaphore = dispatch_semaphore_create(1);
+    
+    dispatch_async(que1, ^{
+        while (self.total > 0) {
+            dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"A , %@, 剩余: %ld", [NSThread currentThread], (long)self.total);
+            self.total--;
+            dispatch_semaphore_signal(self.semaphore);
+        }
+    });
+    dispatch_async(que2, ^{
+        while (self.total > 0) {
+            dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"B , %@, 剩余: %ld", [NSThread currentThread], (long)self.total);
+            self.total--;
+            dispatch_semaphore_signal(self.semaphore);
+        }
+    });
+    dispatch_async(que3, ^{
+        while (self.total > 0) {
+            dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+            NSLog(@"C , %@, 剩余: %ld", [NSThread currentThread], (long)self.total);
+            self.total--;
+            dispatch_semaphore_signal(self.semaphore);
+        }
+    });
+}
 
 
 // MARK: -

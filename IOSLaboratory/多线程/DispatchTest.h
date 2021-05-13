@@ -1,9 +1,3 @@
-//
-//  DispatchTest.h
-//  IOSLaboratory
-//
-//  Created by Jerod on 2021/5/12.
-//
 
 #import <Foundation/Foundation.h>
 
