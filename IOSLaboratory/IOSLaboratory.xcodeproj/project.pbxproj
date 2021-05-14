@@ -116,6 +116,7 @@
 		FA2817CB263A5D2700402BA7 /* ymREADME.md in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C1263A5D2700402BA7 /* ymREADME.md */; };
 		FA2817CC263A5D2700402BA7 /* ymLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C2263A5D2700402BA7 /* ymLICENSE */; };
 		FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA64CF65264B6C19000B9FDB /* DispatchTest.m */; };
+		FAB8DBA5264CC9DE007D9E19 /* OptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +356,8 @@
 		FA64CF64264B6C19000B9FDB /* DispatchTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchTest.h; sourceTree = "<group>"; };
 		FA64CF65264B6C19000B9FDB /* DispatchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchTest.m; sourceTree = "<group>"; };
 		FA64CF6D264B6FEB000B9FDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = IOSLaboratory/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		FAB8DBA3264CC9DE007D9E19 /* OptionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionTest.h; sourceTree = "<group>"; };
+		FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -763,6 +766,8 @@
 			children = (
 				FA64CF64264B6C19000B9FDB /* DispatchTest.h */,
 				FA64CF65264B6C19000B9FDB /* DispatchTest.m */,
+				FAB8DBA3264CC9DE007D9E19 /* OptionTest.h */,
+				FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -986,6 +991,7 @@
 				FA2816A3263A581100402BA7 /* AFURLRequestSerialization.m in Sources */,
 				FA28169B263A581100402BA7 /* UIImageView+AFNetworking.m in Sources */,
 				FA281776263A5C6500402BA7 /* SDWebImagePrefetcher.m in Sources */,
+				FAB8DBA5264CC9DE007D9E19 /* OptionTest.m in Sources */,
 				FA281786263A5C6500402BA7 /* NSData+ImageContentType.m in Sources */,
 				FA28177C263A5C6500402BA7 /* UIImage+ExtendedCacheData.m in Sources */,
 				FA28177F263A5C6500402BA7 /* SDImageGIFCoder.m in Sources */,

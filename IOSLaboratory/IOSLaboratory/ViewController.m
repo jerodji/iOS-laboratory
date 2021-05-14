@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "DispatchTest.h"
+#import "OptionTest.h"
 
 @interface ViewController ()
 
@@ -22,7 +23,8 @@
 - (IBAction)btnAction:(UIButton *)sender {
     NSLog(@"%s",__func__);
     
-    [DispatchTest begin];
+//    [DispatchTest begin];
+    [OptionTest begin];
 }
 
 
