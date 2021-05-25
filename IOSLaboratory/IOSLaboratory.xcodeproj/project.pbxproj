@@ -1181,7 +1181,7 @@
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				GCC_PREFIX_HEADER = "${SRCROOT}/IOSLaboratory/PrefixHeader.pch";
 				INFOPLIST_FILE = IOSLaboratory/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1201,7 +1201,7 @@
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				GCC_PREFIX_HEADER = "${SRCROOT}/IOSLaboratory/PrefixHeader.pch";
 				INFOPLIST_FILE = IOSLaboratory/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

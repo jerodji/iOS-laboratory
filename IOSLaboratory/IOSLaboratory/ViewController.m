@@ -21,10 +21,15 @@
 }
 
 - (IBAction)btnAction:(UIButton *)sender {
-    NSLog(@"%s",__func__);
-    
+//    NSLog(@"%s -------------------------------------------------------------",__func__);
+    printf("\n");
 //    [DispatchTest begin];
     [OptionTest begin];
+    
+    
+    
+    
+    
 }
 
 

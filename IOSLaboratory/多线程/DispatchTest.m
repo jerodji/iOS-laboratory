@@ -7,6 +7,7 @@
 @interface DispatchTest ()
 @property (nonatomic, assign) NSInteger total;
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, copy) NSString *name;
 @end
 
 @implementation DispatchTest
@@ -15,9 +16,12 @@
 //    dispatch_queue_set_specific(dispatch_get_global_queue(0, 0), GLOBAL_QUEUE, &GLOBAL_QUEUE, nil);
     
     DispatchTest *s = [[self alloc] init];
-    s.total = 50;
-    [s saleTicket_safe_three];
+//    s.total = 50;
+//    [s saleTicket_safe_three];
 }
+
+
+
 
 // MARK: - 线程安全 多读单写, 售卖火车票
 
