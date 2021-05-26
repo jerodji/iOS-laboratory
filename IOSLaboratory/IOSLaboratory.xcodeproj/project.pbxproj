@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA25E681265DE54800464050 /* ThreadLock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25E680265DE54800464050 /* ThreadLock.m */; };
 		FA281629263A535000402BA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA281628263A535000402BA7 /* AppDelegate.m */; };
 		FA28162C263A535000402BA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28162B263A535000402BA7 /* SceneDelegate.m */; };
 		FA28162F263A535000402BA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28162E263A535000402BA7 /* ViewController.m */; };
@@ -137,6 +138,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA25E67F265DE54800464050 /* ThreadLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadLock.h; sourceTree = "<group>"; };
+		FA25E680265DE54800464050 /* ThreadLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadLock.m; sourceTree = "<group>"; };
 		FA281624263A535000402BA7 /* IOSLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA281627263A535000402BA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA281628263A535000402BA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -385,10 +388,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA28161B263A535000402BA7 = {
+		FA25E66B265DE37900464050 /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				FAFB8B11264CBD6A00A1C385 /* 多线程 */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		FA28161B263A535000402BA7 = {
+			isa = PBXGroup;
+			children = (
 				FA281626263A535000402BA7 /* IOSLaboratory */,
 				FA281642263A535200402BA7 /* IOSLaboratoryTests */,
 				FA28164D263A535200402BA7 /* IOSLaboratoryUITests */,
@@ -409,6 +419,7 @@
 		FA281626263A535000402BA7 /* IOSLaboratory */ = {
 			isa = PBXGroup;
 			children = (
+				FA25E66B265DE37900464050 /* Test */,
 				FA2816B6263A5BE800402BA7 /* Category */,
 				FA2816B7263A5BFC00402BA7 /* Vender */,
 				FA2816B8263A5C0900402BA7 /* Support Files */,
@@ -768,6 +779,8 @@
 				FA64CF65264B6C19000B9FDB /* DispatchTest.m */,
 				FAB8DBA3264CC9DE007D9E19 /* OptionTest.h */,
 				FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */,
+				FA25E67F265DE54800464050 /* ThreadLock.h */,
+				FA25E680265DE54800464050 /* ThreadLock.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -995,6 +1008,7 @@
 				FA281786263A5C6500402BA7 /* NSData+ImageContentType.m in Sources */,
 				FA28177C263A5C6500402BA7 /* UIImage+ExtendedCacheData.m in Sources */,
 				FA28177F263A5C6500402BA7 /* SDImageGIFCoder.m in Sources */,
+				FA25E681265DE54800464050 /* ThreadLock.m in Sources */,
 				FA281795263A5C6500402BA7 /* SDImageCachesManagerOperation.m in Sources */,
 				FA28179A263A5C6500402BA7 /* SDFileAttributeHelper.m in Sources */,
 				FA28178C263A5C6500402BA7 /* SDWebImageCacheKeyFilter.m in Sources */,

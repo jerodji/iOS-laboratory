@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "DispatchTest.h"
 #import "OptionTest.h"
+#import "ThreadLock.h"
+
 
 @interface ViewController ()
 
@@ -24,8 +26,8 @@
 //    NSLog(@"%s -------------------------------------------------------------",__func__);
     printf("\n");
 //    [DispatchTest begin];
-    [OptionTest begin];
-    
+//    [OptionTest begin];
+    [ThreadLock begin];
     
     
     
