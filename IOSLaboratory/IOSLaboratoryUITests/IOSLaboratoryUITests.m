@@ -14,30 +14,30 @@
 @implementation IOSLaboratoryUITests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    // 设置代码在这里。在调用类中的每个测试方法之前调用此方法。
 
-    // In UI tests it is usually best to stop immediately when a failure occurs.
+    // 在UI测试中，当失败发生时，通常最好立即停止。
     self.continueAfterFailure = NO;
 
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    // 在UI测试中，重要的是在测试运行之前设置测试所需的初始状态，例如界面朝向。setUp方法是这样做的好地方。
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    // 把拆卸代码放在这里。在调用类中的每个测试方法之后调用此方法。
 }
 
 - (void)testExample {
-    // UI tests must launch the application that they test.
+    // UI测试必须启动它们所测试的应用程序。
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
 
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // 使用记录开始编写UI测试。
+    // 使用XCTAssert和相关函数来验证您的测试产生正确的结果。
 }
 
 - (void)testLaunchPerformance {
     if (@available(macOS 10.15, iOS 13.0, tvOS 13.0, *)) {
-        // This measures how long it takes to launch your application.
+        // 这度量了启动应用程序所需的时间。
         [self measureWithMetrics:@[[[XCTApplicationLaunchMetric alloc] init]] block:^{
             [[[XCUIApplication alloc] init] launch];
         }];

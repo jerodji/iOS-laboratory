@@ -6,8 +6,6 @@
 //
 
 #import "ViewController.h"
-#import "DispatchTest.h"
-#import "OptionTest.h"
 #import "ThreadLock.h"
 
 
@@ -19,17 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = UIColor.lightGrayColor;
 }
 
 - (IBAction)btnAction:(UIButton *)sender {
-//    NSLog(@"%s -------------------------------------------------------------",__func__);
-    printf("\n");
-//    [DispatchTest begin];
-//    [OptionTest begin];
-    [ThreadLock begin];
-    
-    
+
+//    [ThreadLock begin];
+    ThreadLock * a = [ThreadLock new];
+    [a testCondition];
     
     
 }

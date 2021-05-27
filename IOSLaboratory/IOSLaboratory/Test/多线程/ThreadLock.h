@@ -10,7 +10,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ThreadLock : NSObject
+
 + (void)begin;
+
++ (void)condition;
+
+- (void)testCondition;
+
 @end
 
 NS_ASSUME_NONNULL_END

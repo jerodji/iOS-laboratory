@@ -1,6 +1,6 @@
 //
 //  ThreadLock.m
-//  IOSLaboratory
+//
 //
 //  Created by Jerod on 2021/5/26.
 //
@@ -13,6 +13,12 @@
 
 
 static NSInteger TAG = 0;
+
+@interface ThreadLock ()
+@property (nonatomic, strong) NSCondition *condition;
+//@property (nonatomic, strong) NSMutableArray *arr;
+@property (nonatomic, assign) int count;
+@end
 
 @implementation ThreadLock
 
@@ -219,6 +225,125 @@ static NSInteger TAG = 0;
 //    }
 }
 
+// MARK: -
+
++ (void)condition {
+    NSCondition *condition = [NSCondition new];
+    NSMutableArray * arr = [NSMutableArray array];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [condition lock];
+        
+        while (arr.count == 0) {
+            [condition wait];
+        }
+        [arr removeObjectAtIndex:0];
+        
+        [condition unlock];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [condition lock];
+        
+        [arr addObject:@"mock"];
+        [condition signal];
+        
+        [condition unlock];
+    });
+    
+}
+
+
+
+- (void)testCondition {
+    self.count = 0;
+    self.condition = [[NSCondition alloc] init];
+    
+    NSThread * t1 = [[NSThread alloc] initWithTarget:self selector:@selector(task1) object:nil];
+    [t1 setName:@"AA"];
+    
+    NSThread * t2 = [[NSThread alloc] initWithTarget:self selector:@selector(task2) object:nil];
+    [t2 setName:@"BB"];
+    
+    NSThread * t3 = [[NSThread alloc] initWithTarget:self selector:@selector(task3) object:nil];
+    [t3 setName:@"CC"];
+    
+    [t1 start];
+    [t2 start];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [t3 start];
+    });
+}
+
+- (void)task1 {
+    [self.condition lock];
+    
+    while (self.count == 0) {
+        NSLog(@"task1 begin wait, %@", [NSThread currentThread]);
+        [self.condition wait];
+    }
+    NSLog(@"task1 will sleep");
+    [NSThread sleepForTimeInterval:1];
+    self.count--;
+    NSLog(@"task1 end: %d", self.count);
+    
+    [self.condition unlock];
+}
+
+- (void)task2 {
+    [self.condition lock];
+    
+    while (self.count == 0) {
+        NSLog(@"task2 begin wait, %@", [NSThread currentThread]);
+        [self.condition wait];
+    }
+    self.count--;
+    NSLog(@"task2 end: %d", self.count);
+    
+    [self.condition unlock];
+}
+
+- (void)task3 {
+    [self.condition lock];
+
+    self.count++;
+    
+    NSLog(@"task3 signal 1, %@", [NSThread currentThread]);
+    [self.condition signal];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"task3 signal 2, %@", [NSThread currentThread]);
+        [self.condition signal];
+    });
+    
+//    [self.condition broadcast];
+
+    [self.condition unlock];
+}
+
+/*
+ 使用 if
+ 12:08:35 task1 begin wait, <NSThread: 0x28050f800>{number = 8, name = AA}
+ 12:08:35 task2 begin wait, <NSThread: 0x28050f840>{number = 9, name = BB}
+ 12:08:38 task3 signal 1, <NSThread: 0x28050f880>{number = 10, name = CC}
+ 12:08:38 task1 end: 0
+ 12:08:40 task3 signal 2, <NSThread: 0x280550f40>{number = 1, name = main}
+ 12:08:40 task2 end: -1
+ 
+ 使用 while
+ 12:09:22 task1 begin wait, <NSThread: 0x283d15540>{number = 6, name = AA}
+ 12:09:22 task2 begin wait, <NSThread: 0x283d154c0>{number = 7, name = BB}
+ 12:09:25 task3 signal 1, <NSThread: 0x283d15480>{number = 8, name = CC}
+ 12:09:25 task1 end: 0
+ 12:09:27 task3 signal 2, <NSThread: 0x283d70f40>{number = 1, name = main}
+ 12:09:27 task2 begin wait, <NSThread: 0x283d154c0>{number = 7, name = BB}
+ 
+ [self.condition broadcast];
+ 2021-05-27 13:51:07.682951+0800 IOSLaboratory[1036:562928] task2 begin wait, <NSThread: 0x2818c8980>{number = 9, name = BB}
+ 2021-05-27 13:51:07.683187+0800 IOSLaboratory[1036:562927] task1 begin wait, <NSThread: 0x2818c89c0>{number = 8, name = AA}
+ 2021-05-27 13:51:10.945754+0800 IOSLaboratory[1036:562928] task2 end: 0
+ 2021-05-27 13:51:10.946171+0800 IOSLaboratory[1036:562927] task1 begin wait, <NSThread: 0x2818c89c0>{number = 8, name = AA}
+ */
 
 
 @end

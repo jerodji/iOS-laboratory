@@ -7,6 +7,10 @@
 
 #import <XCTest/XCTest.h>
 
+#import "DispatchTest.h"
+#import "OptionTest.h"
+#import "ThreadLock.h"
+
 @interface IOSLaboratoryTests : XCTestCase
 
 @end
@@ -14,23 +18,44 @@
 @implementation IOSLaboratoryTests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    // 把设置代码放在这里。在调用类中的每个测试方法之前调用此方法。
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    // 把拆卸代码放在这里。在调用类中的每个测试方法之后调用此方法。
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // 这是一个功能测试用例。
+    // 使用XCTAssert和相关函数来验证您的测试产生正确的结果。
 }
 
 - (void)testPerformanceExample {
-    // This is an example of a performance test case.
+    // 这是一个性能测试用例的例子。
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        // 把你想要测量时间的代码放在这里。
     }];
 }
+
+- (void)test_dispatch {
+    printf("----------------------------------\n");
+    [DispatchTest begin];
+}
+
+- (void)test_option {
+    printf("----------------------------------\n");
+    [OptionTest begin];
+}
+
+
+- (void)test_lock {
+    printf("\n");
+//    [ThreadLock begin];
+    [ThreadLock condition];
+}
+
+
+
+
 
 @end
