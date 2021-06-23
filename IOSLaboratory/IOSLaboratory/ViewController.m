@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import "ThreadLock.h"
-
+#import "Student.h"
 
 @interface ViewController ()
 
@@ -23,9 +23,16 @@
 - (IBAction)btnAction:(UIButton *)sender {
 
 //    [ThreadLock begin];
-    ThreadLock * a = [ThreadLock new];
-    [a testCondition];
+//    ThreadLock * a = [ThreadLock new];
+//    [a testCondition];
     
+    Student * s = [Student new];
+    [s foo];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"---------");
+        Person *p = [Person new];
+        [p foo];
+    });
     
 }
 

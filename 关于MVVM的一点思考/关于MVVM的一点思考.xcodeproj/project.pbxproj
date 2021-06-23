@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA7DD4C62665CF8A0042473A /* OtherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DD4C52665CF8A0042473A /* OtherViewModel.swift */; };
+		FACE06622665C96000370FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06612665C96000370FBD /* AppDelegate.swift */; };
+		FACE06662665C96000370FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06652665C96000370FBD /* ViewController.swift */; };
+		FACE06692665C96000370FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACE06672665C96000370FBD /* Main.storyboard */; };
+		FACE066B2665C96200370FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACE066A2665C96200370FBD /* Assets.xcassets */; };
+		FACE066E2665C96200370FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACE066C2665C96200370FBD /* LaunchScreen.storyboard */; };
+		FACE06792665C96300370FBD /* __MVVM_____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06782665C96300370FBD /* __MVVM_____Tests.swift */; };
+		FACE06842665C96300370FBD /* __MVVM_____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06832665C96300370FBD /* __MVVM_____UITests.swift */; };
+		FACE06A62665CAA100370FBD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06A52665CAA100370FBD /* Model.swift */; };
+		FACE06AB2665CACB00370FBD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06AA2665CACB00370FBD /* ViewModel.swift */; };
+		FACE06B12665CAFE00370FBD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE06B02665CAFE00370FBD /* View.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACE06752665C96300370FBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACE06562665C96000370FBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACE065D2665C96000370FBD;
+			remoteInfo = "关于MVVM的一点思考";
+		};
+		FACE06802665C96300370FBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACE06562665C96000370FBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACE065D2665C96000370FBD;
+			remoteInfo = "关于MVVM的一点思考";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA7DD4C52665CF8A0042473A /* OtherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewModel.swift; sourceTree = "<group>"; };
+		FACE065E2665C96000370FBD /* 关于MVVM的一点思考.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "关于MVVM的一点思考.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACE06612665C96000370FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FACE06652665C96000370FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FACE06682665C96000370FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FACE066A2665C96200370FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACE066D2665C96200370FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FACE066F2665C96200370FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACE06742665C96300370FBD /* 关于MVVM的一点思考Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "关于MVVM的一点思考Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACE06782665C96300370FBD /* __MVVM_____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__MVVM_____Tests.swift"; sourceTree = "<group>"; };
+		FACE067A2665C96300370FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACE067F2665C96300370FBD /* 关于MVVM的一点思考UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "关于MVVM的一点思考UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACE06832665C96300370FBD /* __MVVM_____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__MVVM_____UITests.swift"; sourceTree = "<group>"; };
+		FACE06852665C96300370FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACE06A52665CAA100370FBD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FACE06AA2665CACB00370FBD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FACE06B02665CAFE00370FBD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACE065B2665C96000370FBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE06712665C96300370FBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE067C2665C96300370FBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACE06552665C96000370FBD = {
+			isa = PBXGroup;
+			children = (
+				FACE06602665C96000370FBD /* 关于MVVM的一点思考 */,
+				FACE06772665C96300370FBD /* 关于MVVM的一点思考Tests */,
+				FACE06822665C96300370FBD /* 关于MVVM的一点思考UITests */,
+				FACE065F2665C96000370FBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACE065F2665C96000370FBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACE065E2665C96000370FBD /* 关于MVVM的一点思考.app */,
+				FACE06742665C96300370FBD /* 关于MVVM的一点思考Tests.xctest */,
+				FACE067F2665C96300370FBD /* 关于MVVM的一点思考UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACE06602665C96000370FBD /* 关于MVVM的一点思考 */ = {
+			isa = PBXGroup;
+			children = (
+				FACE06652665C96000370FBD /* ViewController.swift */,
+				FACE06AF2665CADB00370FBD /* MVVM */,
+				FACE06612665C96000370FBD /* AppDelegate.swift */,
+				FACE06672665C96000370FBD /* Main.storyboard */,
+				FACE066A2665C96200370FBD /* Assets.xcassets */,
+				FACE066C2665C96200370FBD /* LaunchScreen.storyboard */,
+				FACE066F2665C96200370FBD /* Info.plist */,
+			);
+			path = "关于MVVM的一点思考";
+			sourceTree = "<group>";
+		};
+		FACE06772665C96300370FBD /* 关于MVVM的一点思考Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FACE06782665C96300370FBD /* __MVVM_____Tests.swift */,
+				FACE067A2665C96300370FBD /* Info.plist */,
+			);
+			path = "关于MVVM的一点思考Tests";
+			sourceTree = "<group>";
+		};
+		FACE06822665C96300370FBD /* 关于MVVM的一点思考UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FACE06832665C96300370FBD /* __MVVM_____UITests.swift */,
+				FACE06852665C96300370FBD /* Info.plist */,
+			);
+			path = "关于MVVM的一点思考UITests";
+			sourceTree = "<group>";
+		};
+		FACE06AF2665CADB00370FBD /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				FACE06A52665CAA100370FBD /* Model.swift */,
+				FACE06AA2665CACB00370FBD /* ViewModel.swift */,
+				FACE06B02665CAFE00370FBD /* View.swift */,
+				FA7DD4C52665CF8A0042473A /* OtherViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACE065D2665C96000370FBD /* 关于MVVM的一点思考 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACE06882665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考" */;
+			buildPhases = (
+				FACE065A2665C96000370FBD /* Sources */,
+				FACE065B2665C96000370FBD /* Frameworks */,
+				FACE065C2665C96000370FBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "关于MVVM的一点思考";
+			productName = "关于MVVM的一点思考";
+			productReference = FACE065E2665C96000370FBD /* 关于MVVM的一点思考.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FACE06732665C96300370FBD /* 关于MVVM的一点思考Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACE068B2665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考Tests" */;
+			buildPhases = (
+				FACE06702665C96300370FBD /* Sources */,
+				FACE06712665C96300370FBD /* Frameworks */,
+				FACE06722665C96300370FBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACE06762665C96300370FBD /* PBXTargetDependency */,
+			);
+			name = "关于MVVM的一点思考Tests";
+			productName = "关于MVVM的一点思考Tests";
+			productReference = FACE06742665C96300370FBD /* 关于MVVM的一点思考Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FACE067E2665C96300370FBD /* 关于MVVM的一点思考UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACE068E2665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考UITests" */;
+			buildPhases = (
+				FACE067B2665C96300370FBD /* Sources */,
+				FACE067C2665C96300370FBD /* Frameworks */,
+				FACE067D2665C96300370FBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACE06812665C96300370FBD /* PBXTargetDependency */,
+			);
+			name = "关于MVVM的一点思考UITests";
+			productName = "关于MVVM的一点思考UITests";
+			productReference = FACE067F2665C96300370FBD /* 关于MVVM的一点思考UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACE06562665C96000370FBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					FACE065D2665C96000370FBD = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					FACE06732665C96300370FBD = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = FACE065D2665C96000370FBD;
+					};
+					FACE067E2665C96300370FBD = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = FACE065D2665C96000370FBD;
+					};
+				};
+			};
+			buildConfigurationList = FACE06592665C96000370FBD /* Build configuration list for PBXProject "关于MVVM的一点思考" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACE06552665C96000370FBD;
+			productRefGroup = FACE065F2665C96000370FBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACE065D2665C96000370FBD /* 关于MVVM的一点思考 */,
+				FACE06732665C96300370FBD /* 关于MVVM的一点思考Tests */,
+				FACE067E2665C96300370FBD /* 关于MVVM的一点思考UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACE065C2665C96000370FBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE066E2665C96200370FBD /* LaunchScreen.storyboard in Resources */,
+				FACE066B2665C96200370FBD /* Assets.xcassets in Resources */,
+				FACE06692665C96000370FBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE06722665C96300370FBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE067D2665C96300370FBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACE065A2665C96000370FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE06A62665CAA100370FBD /* Model.swift in Sources */,
+				FA7DD4C62665CF8A0042473A /* OtherViewModel.swift in Sources */,
+				FACE06662665C96000370FBD /* ViewController.swift in Sources */,
+				FACE06B12665CAFE00370FBD /* View.swift in Sources */,
+				FACE06AB2665CACB00370FBD /* ViewModel.swift in Sources */,
+				FACE06622665C96000370FBD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE06702665C96300370FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE06792665C96300370FBD /* __MVVM_____Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACE067B2665C96300370FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE06842665C96300370FBD /* __MVVM_____UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACE06762665C96300370FBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACE065D2665C96000370FBD /* 关于MVVM的一点思考 */;
+			targetProxy = FACE06752665C96300370FBD /* PBXContainerItemProxy */;
+		};
+		FACE06812665C96300370FBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACE065D2665C96000370FBD /* 关于MVVM的一点思考 */;
+			targetProxy = FACE06802665C96300370FBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FACE06672665C96000370FBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACE06682665C96000370FBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FACE066C2665C96200370FBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACE066D2665C96200370FBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACE06862665C96300370FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FACE06872665C96300370FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACE06892665C96300370FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JIJIUDONG.MVVM.thing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACE068A2665C96300370FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JIJIUDONG.MVVM.thing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FACE068C2665C96300370FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.--MVVM-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/关于MVVM的一点思考.app/关于MVVM的一点思考";
+			};
+			name = Debug;
+		};
+		FACE068D2665C96300370FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.--MVVM-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/关于MVVM的一点思考.app/关于MVVM的一点思考";
+			};
+			name = Release;
+		};
+		FACE068F2665C96300370FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.--MVVM-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "关于MVVM的一点思考";
+			};
+			name = Debug;
+		};
+		FACE06902665C96300370FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "关于MVVM的一点思考UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.--MVVM-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "关于MVVM的一点思考";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACE06592665C96000370FBD /* Build configuration list for PBXProject "关于MVVM的一点思考" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACE06862665C96300370FBD /* Debug */,
+				FACE06872665C96300370FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACE06882665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACE06892665C96300370FBD /* Debug */,
+				FACE068A2665C96300370FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACE068B2665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACE068C2665C96300370FBD /* Debug */,
+				FACE068D2665C96300370FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACE068E2665C96300370FBD /* Build configuration list for PBXNativeTarget "关于MVVM的一点思考UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACE068F2665C96300370FBD /* Debug */,
+				FACE06902665C96300370FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACE06562665C96000370FBD /* Project object */;
+}

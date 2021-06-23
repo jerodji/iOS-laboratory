@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1CC3022682E85100CF5934 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC3012682E85100CF5934 /* Person.m */; };
+		FA1CC3082682E90200CF5934 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC3072682E90200CF5934 /* Student.m */; };
+		FA1CC30E2682EA5E00CF5934 /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */; };
 		FA25E681265DE54800464050 /* ThreadLock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25E680265DE54800464050 /* ThreadLock.m */; };
 		FA281629263A535000402BA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA281628263A535000402BA7 /* AppDelegate.m */; };
 		FA28162C263A535000402BA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28162B263A535000402BA7 /* SceneDelegate.m */; };
@@ -117,6 +120,10 @@
 		FA2817CB263A5D2700402BA7 /* ymREADME.md in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C1263A5D2700402BA7 /* ymREADME.md */; };
 		FA2817CC263A5D2700402BA7 /* ymLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA2817C2263A5D2700402BA7 /* ymLICENSE */; };
 		FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA64CF65264B6C19000B9FDB /* DispatchTest.m */; };
+		FA7684BD26628216009FEC0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7684BC26628216009FEC0C /* User.swift */; };
+		FA7684CB26628384009FEC0C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7684CA26628384009FEC0C /* Request.swift */; };
+		FA7684D0266283AA009FEC0C /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7684CF266283AA009FEC0C /* UserRequest.swift */; };
+		FA7684D5266287D2009FEC0C /* bein.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7684D4266287D2009FEC0C /* bein.swift */; };
 		FAB8DBA5264CC9DE007D9E19 /* OptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +145,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1CC3002682E85100CF5934 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FA1CC3012682E85100CF5934 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		FA1CC3062682E90200CF5934 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		FA1CC3072682E90200CF5934 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		FA1CC30C2682EA5E00CF5934 /* RuntimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTool.h; sourceTree = "<group>"; };
+		FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTool.m; sourceTree = "<group>"; };
 		FA25E67F265DE54800464050 /* ThreadLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadLock.h; sourceTree = "<group>"; };
 		FA25E680265DE54800464050 /* ThreadLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadLock.m; sourceTree = "<group>"; };
 		FA281624263A535000402BA7 /* IOSLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +372,11 @@
 		FA64CF64264B6C19000B9FDB /* DispatchTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchTest.h; sourceTree = "<group>"; };
 		FA64CF65264B6C19000B9FDB /* DispatchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchTest.m; sourceTree = "<group>"; };
 		FA64CF6D264B6FEB000B9FDB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = IOSLaboratory/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		FA7684BB26628216009FEC0C /* IOSLaboratory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IOSLaboratory-Bridging-Header.h"; path = "IOSLaboratory/IOSLaboratory-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FA7684BC26628216009FEC0C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA7684CA26628384009FEC0C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FA7684CF266283AA009FEC0C /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		FA7684D4266287D2009FEC0C /* bein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bein.swift; sourceTree = "<group>"; };
 		FAB8DBA3264CC9DE007D9E19 /* OptionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionTest.h; sourceTree = "<group>"; };
 		FAB8DBA4264CC9DE007D9E19 /* OptionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -388,9 +406,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1CC2FF2682E81800CF5934 /* Swizzed */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CC3002682E85100CF5934 /* Person.h */,
+				FA1CC3012682E85100CF5934 /* Person.m */,
+				FA1CC3062682E90200CF5934 /* Student.h */,
+				FA1CC3072682E90200CF5934 /* Student.m */,
+				FA1CC30C2682EA5E00CF5934 /* RuntimeTool.h */,
+				FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */,
+			);
+			path = Swizzed;
+			sourceTree = "<group>";
+		};
 		FA25E66B265DE37900464050 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CC2FF2682E81800CF5934 /* Swizzed */,
+				FA7684BA266281ED009FEC0C /* 面向协议-POP */,
 				FAFB8B11264CBD6A00A1C385 /* 多线程 */,
 			);
 			path = Test;
@@ -399,6 +432,7 @@
 		FA28161B263A535000402BA7 = {
 			isa = PBXGroup;
 			children = (
+				FA25E66B265DE37900464050 /* Test */,
 				FA281626263A535000402BA7 /* IOSLaboratory */,
 				FA281642263A535200402BA7 /* IOSLaboratoryTests */,
 				FA28164D263A535200402BA7 /* IOSLaboratoryUITests */,
@@ -419,7 +453,6 @@
 		FA281626263A535000402BA7 /* IOSLaboratory */ = {
 			isa = PBXGroup;
 			children = (
-				FA25E66B265DE37900464050 /* Test */,
 				FA2816B6263A5BE800402BA7 /* Category */,
 				FA2816B7263A5BFC00402BA7 /* Vender */,
 				FA2816B8263A5C0900402BA7 /* Support Files */,
@@ -532,6 +565,7 @@
 				FA28162B263A535000402BA7 /* SceneDelegate.m */,
 				FA28162D263A535000402BA7 /* ViewController.h */,
 				FA28162E263A535000402BA7 /* ViewController.m */,
+				FA7684BB26628216009FEC0C /* IOSLaboratory-Bridging-Header.h */,
 				FA64CF6D264B6FEB000B9FDB /* PrefixHeader.pch */,
 				FA281630263A535000402BA7 /* Main.storyboard */,
 				FA281633263A535200402BA7 /* Assets.xcassets */,
@@ -772,6 +806,17 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		FA7684BA266281ED009FEC0C /* 面向协议-POP */ = {
+			isa = PBXGroup;
+			children = (
+				FA7684BC26628216009FEC0C /* User.swift */,
+				FA7684CA26628384009FEC0C /* Request.swift */,
+				FA7684CF266283AA009FEC0C /* UserRequest.swift */,
+				FA7684D4266287D2009FEC0C /* bein.swift */,
+			);
+			path = "面向协议-POP";
+			sourceTree = "<group>";
+		};
 		FAFB8B11264CBD6A00A1C385 /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,6 +896,7 @@
 				TargetAttributes = {
 					FA281623263A535000402BA7 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					FA28163E263A535200402BA7 = {
 						CreatedOnToolsVersion = 12.2;
@@ -922,6 +968,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7684D0266283AA009FEC0C /* UserRequest.swift in Sources */,
 				FA28169A263A581100402BA7 /* WKWebView+AFNetworking.m in Sources */,
 				FA28162F263A535000402BA7 /* ViewController.m in Sources */,
 				FA28175C263A5C6500402BA7 /* SDAnimatedImageView+WebCache.m in Sources */,
@@ -934,6 +981,7 @@
 				FA2817C9263A5D2700402BA7 /* NSObject+YYModel.m in Sources */,
 				FA281793263A5C6500402BA7 /* SDWebImageDownloaderRequestModifier.m in Sources */,
 				FA28176F263A5C6500402BA7 /* SDImageCodersManager.m in Sources */,
+				FA7684D5266287D2009FEC0C /* bein.swift in Sources */,
 				FA281778263A5C6500402BA7 /* NSButton+WebCache.m in Sources */,
 				FA2817CA263A5D2700402BA7 /* YYClassInfo.m in Sources */,
 				FA281770263A5C6500402BA7 /* UIImage+MultiFormat.m in Sources */,
@@ -954,10 +1002,12 @@
 				FA281773263A5C6500402BA7 /* SDImageAPNGCoder.m in Sources */,
 				FA28178E263A5C6500402BA7 /* SDWebImageOptionsProcessor.m in Sources */,
 				FA28163A263A535200402BA7 /* main.m in Sources */,
+				FA7684BD26628216009FEC0C /* User.swift in Sources */,
 				FA28176A263A5C6500402BA7 /* SDImageLoader.m in Sources */,
 				FA281799263A5C6500402BA7 /* SDInternalMacros.m in Sources */,
 				FA28176E263A5C6500402BA7 /* UIImage+GIF.m in Sources */,
 				FA28176C263A5C6500402BA7 /* SDWebImageIndicator.m in Sources */,
+				FA7684CB26628384009FEC0C /* Request.swift in Sources */,
 				FA28175F263A5C6500402BA7 /* SDWebImageDownloaderDecryptor.m in Sources */,
 				FA281760263A5C6500402BA7 /* SDWebImageManager.m in Sources */,
 				FA28179D263A5C6500402BA7 /* SDAsyncBlockOperation.m in Sources */,
@@ -980,10 +1030,13 @@
 				FA281775263A5C6500402BA7 /* SDWebImageError.m in Sources */,
 				FA28178D263A5C6500402BA7 /* SDWebImageDefine.m in Sources */,
 				FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */,
+				FA1CC30E2682EA5E00CF5934 /* RuntimeTool.m in Sources */,
+				FA1CC3022682E85100CF5934 /* Person.m in Sources */,
 				FA281796263A5C6500402BA7 /* SDImageAssetManager.m in Sources */,
 				FA2816A2263A581100402BA7 /* AFURLSessionManager.m in Sources */,
 				FA2816BF263A5C4000402BA7 /* UILabel+LineSpaceOrWordSpace.m in Sources */,
 				FA28177D263A5C6500402BA7 /* SDWebImageDownloaderConfig.m in Sources */,
+				FA1CC3082682E90200CF5934 /* Student.m in Sources */,
 				FA2817C3263A5D2700402BA7 /* YYDiskCache.m in Sources */,
 				FA28177A263A5C6500402BA7 /* SDDiskCache.m in Sources */,
 				FA2816A4263A581100402BA7 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1191,6 +1244,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				GCC_PREFIX_HEADER = "${SRCROOT}/IOSLaboratory/PrefixHeader.pch";
@@ -1202,6 +1256,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JIJIUDONG.IOSLaboratory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/IOSLaboratory/IOSLaboratory-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1211,6 +1268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				GCC_PREFIX_HEADER = "${SRCROOT}/IOSLaboratory/PrefixHeader.pch";
@@ -1222,6 +1280,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JIJIUDONG.IOSLaboratory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/IOSLaboratory/IOSLaboratory-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1229,6 +1289,7 @@
 		FA281657263A535200402BA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
@@ -1249,6 +1310,7 @@
 		FA281658263A535200402BA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
@@ -1269,6 +1331,7 @@
 		FA28165A263A535200402BA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				INFOPLIST_FILE = IOSLaboratoryUITests/Info.plist;
@@ -1287,6 +1350,7 @@
 		FA28165B263A535200402BA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
 				INFOPLIST_FILE = IOSLaboratoryUITests/Info.plist;

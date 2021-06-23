@@ -53,7 +53,7 @@ static NSInteger TAG = 0;
     
     NSInteger r = TAG % 10;
     switch (r) {
-        // OSSpinLock
+        // MARK: OSSpinLock
         case 1: {
             OSSpinLock lock = OS_SPINLOCK_INIT;
             begin = CACurrentMediaTime();
@@ -64,7 +64,7 @@ static NSInteger TAG = 0;
             printf("OSSpinLock  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // os_unfair_lock
+        // MARK: os_unfair_lock
         case 2: {
             os_unfair_lock lock = OS_UNFAIR_LOCK_INIT;
             begin = CACurrentMediaTime();
@@ -75,7 +75,7 @@ static NSInteger TAG = 0;
             printf("os_unfair_lock  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // dispatch_semaphore_t
+        // MARK: dispatch_semaphore_t
         case 3: {
             dispatch_semaphore_t dsema = dispatch_semaphore_create(1);
             begin = CACurrentMediaTime();
@@ -86,7 +86,7 @@ static NSInteger TAG = 0;
             printf("dispatch_semaphore_t  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // NSLock
+        // MARK: NSLock
         case 4: {
             NSLock *lock = [NSLock new];
             begin = CACurrentMediaTime();
@@ -97,7 +97,7 @@ static NSInteger TAG = 0;
             printf("NSLock  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // NSCondition
+        // MARK: NSCondition
         case 5: {
             NSCondition * lock = [NSCondition new];
             begin = CACurrentMediaTime();
@@ -108,7 +108,7 @@ static NSInteger TAG = 0;
             printf("NSCondition  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // pthread_mutex 互斥锁
+        // MARK: pthread_mutex 互斥锁
         case 6: {
             pthread_mutex_t lock;
             pthread_mutex_init(&lock, NULL);
@@ -120,7 +120,7 @@ static NSInteger TAG = 0;
             printf("pthread_mutex_t  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // NSConditionLock
+        // MARK: NSConditionLock
         case 7: {
             NSConditionLock * lock = [NSConditionLock new];
             begin = CACurrentMediaTime();
@@ -131,7 +131,7 @@ static NSInteger TAG = 0;
             printf("NSConditionLock  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // NSRecursiveLock, 递归锁
+        // MARK: NSRecursiveLock, 递归锁
         case 8: {
             NSRecursiveLock * lock = [NSRecursiveLock new];
             begin = CACurrentMediaTime();
@@ -142,7 +142,7 @@ static NSInteger TAG = 0;
             printf("NSRecursiveLock  %.2f μs\n", (end - begin)*1000*1000);
         } break;
             
-        // @synchronized
+        // MARK: @synchronized
         case 9: {
             NSObject *lock = [NSObject new];
             begin = CACurrentMediaTime();
