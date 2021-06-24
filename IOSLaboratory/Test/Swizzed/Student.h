@@ -11,6 +11,10 @@
 
 @interface Student : Person
 
+- (void)hello;
+
+- (void)euu;
+
 @end
 
 

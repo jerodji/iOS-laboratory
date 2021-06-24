@@ -27,12 +27,17 @@
 //    [a testCondition];
     
     Student * s = [Student new];
+    NSLog(@"1 [s foo]");
     [s foo];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"---------");
-        Person *p = [Person new];
-        [p foo];
-    });
+    
+    NSLog(@"2 [s euu]");
+    [s euu];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"3 ---------");
+//        Person *p = [Person new];
+//        [p foo];
+//    });
     
 }
 
