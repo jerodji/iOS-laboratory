@@ -27,6 +27,7 @@ static NSString * CELLID = @"cellid";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"开始");
     
     UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-20)];
     tableView.delegate = self;
@@ -36,6 +37,7 @@ static NSString * CELLID = @"cellid";
     
     _taskArray = [NSMutableArray array];
     _maxQueue = 600;
+    
     //为了让runloop一直处于运行状态
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
     
@@ -52,17 +54,24 @@ static NSString * CELLID = @"cellid";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
-    }
+//    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
+//    }
     
+    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
+    
+    for (UIView * el in cell.contentView.subviews) {
+        [el removeFromSuperview];
+    }
     
 //    //30s 60M, 再一次runloop循环中全部渲染,会卡顿
 //    for (int i=0; i<10; i++) {
 //        for (int j=0; j<10; j++) {
-//            UIImageView * imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"akn.jpg"]];
-//            imgView.frame = CGRectMake(i*32, j*10, 32, 10);
+//            UIImageView * imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"big.png"]];
+//            imgView.frame = CGRectMake(i*50, j*50, 50, 50);
+//            imgView.layer.cornerRadius = 25;
+//            imgView.layer.masksToBounds = YES;
 //            [cell.contentView addSubview:imgView];
 //        }
 //    }
@@ -71,13 +80,15 @@ static NSString * CELLID = @"cellid";
     //一次runloop循环渲染一个,不卡顿
     //30s 16M,
     for (int i=0; i<10; i++) {
-        for (int j=0; j<10; j++) {
-            [self addTask:^{
-                UIImageView * imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"akn.jpg"]];
-                imgView.frame = CGRectMake(i*32, j*10, 32, 10);
+        [self addTask:^{
+            for (int j=0; j<10; j++) {
+                UIImageView * imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"big.png"]];
+                imgView.frame = CGRectMake(i*50, j*50, 50, 50);
+                imgView.layer.cornerRadius = 25;
+                imgView.layer.masksToBounds = YES;
                 [cell.contentView addSubview:imgView];
-            }];
-        }
+            }
+        }];
     }
     
     return cell;
