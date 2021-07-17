@@ -142,7 +142,7 @@ static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
     //用static，因为只需要一个
     static CFRunLoopObserverRef observer;
     observer = CFRunLoopObserverCreate(
-                               NULL,
+                               NULL,//kCFAllocatorDefault
                                kCFRunLoopAfterWaiting,/*在什么时候监听*/
                                YES,/*需要循环监听*/
                                0,

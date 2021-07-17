@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA763ACE26A2DBB300E7254F /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FA763ACC26A2DBB300E7254F /* LXDBacktraceLogger.m */; };
+		FA8869B6269FD36C00AAC234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869B5269FD36C00AAC234 /* AppDelegate.m */; };
+		FA8869BC269FD36C00AAC234 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869BB269FD36C00AAC234 /* ViewController.m */; };
+		FA8869BF269FD36C00AAC234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8869BD269FD36C00AAC234 /* Main.storyboard */; };
+		FA8869C1269FD36E00AAC234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8869C0269FD36E00AAC234 /* Assets.xcassets */; };
+		FA8869C4269FD36E00AAC234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8869C2269FD36E00AAC234 /* LaunchScreen.storyboard */; };
+		FA8869C7269FD36E00AAC234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869C6269FD36E00AAC234 /* main.m */; };
+		FA8869D2269FD44200AAC234 /* JJLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869D1269FD44200AAC234 /* JJLagMonitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA763ACC26A2DBB300E7254F /* LXDBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDBacktraceLogger.m; sourceTree = "<group>"; };
+		FA763ACD26A2DBB300E7254F /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
+		FA8869B1269FD36C00AAC234 /* runloop卡顿监控.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "runloop卡顿监控.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8869B4269FD36C00AAC234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA8869B5269FD36C00AAC234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA8869BA269FD36C00AAC234 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FA8869BB269FD36C00AAC234 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FA8869BE269FD36C00AAC234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA8869C0269FD36E00AAC234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA8869C3269FD36E00AAC234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA8869C5269FD36E00AAC234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA8869C6269FD36E00AAC234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA8869D0269FD44200AAC234 /* JJLagMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJLagMonitor.h; sourceTree = "<group>"; };
+		FA8869D1269FD44200AAC234 /* JJLagMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJLagMonitor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA8869AE269FD36C00AAC234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA763ACB26A2DBB300E7254F /* Backtrace */ = {
+			isa = PBXGroup;
+			children = (
+				FA763ACC26A2DBB300E7254F /* LXDBacktraceLogger.m */,
+				FA763ACD26A2DBB300E7254F /* LXDBacktraceLogger.h */,
+			);
+			path = Backtrace;
+			sourceTree = "<group>";
+		};
+		FA8869A8269FD36C00AAC234 = {
+			isa = PBXGroup;
+			children = (
+				FA8869CF269FD41700AAC234 /* LagMonitor */,
+				FA8869B3269FD36C00AAC234 /* runloop卡顿监控 */,
+				FA8869B2269FD36C00AAC234 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA8869B2269FD36C00AAC234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA8869B1269FD36C00AAC234 /* runloop卡顿监控.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA8869B3269FD36C00AAC234 /* runloop卡顿监控 */ = {
+			isa = PBXGroup;
+			children = (
+				FA8869BA269FD36C00AAC234 /* ViewController.h */,
+				FA8869BB269FD36C00AAC234 /* ViewController.m */,
+				FA8869B4269FD36C00AAC234 /* AppDelegate.h */,
+				FA8869B5269FD36C00AAC234 /* AppDelegate.m */,
+				FA8869BD269FD36C00AAC234 /* Main.storyboard */,
+				FA8869C0269FD36E00AAC234 /* Assets.xcassets */,
+				FA8869C2269FD36E00AAC234 /* LaunchScreen.storyboard */,
+				FA8869C5269FD36E00AAC234 /* Info.plist */,
+				FA8869C6269FD36E00AAC234 /* main.m */,
+			);
+			path = "runloop卡顿监控";
+			sourceTree = "<group>";
+		};
+		FA8869CF269FD41700AAC234 /* LagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				FA763ACB26A2DBB300E7254F /* Backtrace */,
+				FA8869D0269FD44200AAC234 /* JJLagMonitor.h */,
+				FA8869D1269FD44200AAC234 /* JJLagMonitor.m */,
+			);
+			path = LagMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA8869B0269FD36C00AAC234 /* runloop卡顿监控 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8869CA269FD36E00AAC234 /* Build configuration list for PBXNativeTarget "runloop卡顿监控" */;
+			buildPhases = (
+				FA8869AD269FD36C00AAC234 /* Sources */,
+				FA8869AE269FD36C00AAC234 /* Frameworks */,
+				FA8869AF269FD36C00AAC234 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "runloop卡顿监控";
+			productName = "runloop卡顿监控";
+			productReference = FA8869B1269FD36C00AAC234 /* runloop卡顿监控.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA8869A9269FD36C00AAC234 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					FA8869B0269FD36C00AAC234 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = FA8869AC269FD36C00AAC234 /* Build configuration list for PBXProject "runloop卡顿监控" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA8869A8269FD36C00AAC234;
+			productRefGroup = FA8869B2269FD36C00AAC234 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA8869B0269FD36C00AAC234 /* runloop卡顿监控 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA8869AF269FD36C00AAC234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8869C4269FD36E00AAC234 /* LaunchScreen.storyboard in Resources */,
+				FA8869C1269FD36E00AAC234 /* Assets.xcassets in Resources */,
+				FA8869BF269FD36C00AAC234 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA8869AD269FD36C00AAC234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8869BC269FD36C00AAC234 /* ViewController.m in Sources */,
+				FA763ACE26A2DBB300E7254F /* LXDBacktraceLogger.m in Sources */,
+				FA8869D2269FD44200AAC234 /* JJLagMonitor.m in Sources */,
+				FA8869B6269FD36C00AAC234 /* AppDelegate.m in Sources */,
+				FA8869C7269FD36E00AAC234 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA8869BD269FD36C00AAC234 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA8869BE269FD36C00AAC234 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA8869C2269FD36E00AAC234 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA8869C3269FD36E00AAC234 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA8869C8269FD36E00AAC234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA8869C9269FD36E00AAC234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA8869CB269FD36E00AAC234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "runloop卡顿监控/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.runloop----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA8869CC269FD36E00AAC234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2ZL3LJVPZ;
+				INFOPLIST_FILE = "runloop卡顿监控/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JIJIUDONG.runloop----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA8869AC269FD36C00AAC234 /* Build configuration list for PBXProject "runloop卡顿监控" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8869C8269FD36E00AAC234 /* Debug */,
+				FA8869C9269FD36E00AAC234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8869CA269FD36E00AAC234 /* Build configuration list for PBXNativeTarget "runloop卡顿监控" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8869CB269FD36E00AAC234 /* Debug */,
+				FA8869CC269FD36E00AAC234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA8869A9269FD36C00AAC234 /* Project object */;
+}
