@@ -1,11 +1,11 @@
 //
-//  JJLagMonitor.m
+//  LagMonitor.m
 //  runloop卡顿监控
 //
 //  Created by Jerod on 2021/7/15.
 //
 
-#import "JJLagMonitor.h"
+#import "LagMonitor.h"
 #import "LXDBacktraceLogger.h"
 
 // 定义延迟时间 毫秒
@@ -13,7 +13,7 @@ static int64_t const OUT_TIME = 100 * NSEC_PER_MSEC;
 // before wait 的超时时间
 static NSTimeInterval const WAIT_TIME = 0.5;
 
-@interface JJLagMonitor () {
+@interface LagMonitor () {
     @public
     CFRunLoopObserverRef observer;
     CFRunLoopActivity currentActivity;
@@ -23,14 +23,14 @@ static NSTimeInterval const WAIT_TIME = 0.5;
 @end
 
 static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
-    //JJLagMonitor * monitor = (__bridge JJLagMonitor*)info;
-    [JJLagMonitor shared]->currentActivity = activity;
+    //LagMonitor * monitor = (__bridge LagMonitor*)info;
+    [LagMonitor shared]->currentActivity = activity;
     
-    dispatch_semaphore_t sema = [JJLagMonitor shared]->semaphore;
+    dispatch_semaphore_t sema = [LagMonitor shared]->semaphore;
     dispatch_semaphore_signal(sema);
 }
 
-@implementation JJLagMonitor
+@implementation LagMonitor
 
 + (instancetype)shared {
     static id ins = nil;
@@ -50,9 +50,9 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
 
 - (void)beginMonitor {
     
-    if ([JJLagMonitor shared]->isMonitoring) return;
+    if ([LagMonitor shared]->isMonitoring) return;
     
-    [JJLagMonitor shared]->isMonitoring = YES;
+    [LagMonitor shared]->isMonitoring = YES;
     
     // 创建观察者
     CFRunLoopObserverContext context = {
@@ -72,30 +72,33 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     semaphore = dispatch_semaphore_create(0);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         // 开启持续的loop来监控
-        while ([JJLagMonitor shared]->isMonitoring) {
-            if ([JJLagMonitor shared]->currentActivity == kCFRunLoopBeforeWaiting)
+        while ([LagMonitor shared]->isMonitoring) {
+            if ([LagMonitor shared]->currentActivity == kCFRunLoopBeforeWaiting)
             {
+                // 处理休眠前事件观测
                 __block BOOL timeOut = YES;
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    timeOut = NO;
+                    timeOut = NO; // timeOut任务
                 });
                 [NSThread sleepForTimeInterval:WAIT_TIME];
+                // WAIT_TIME 时间后,如果 timeOut任务 任未执行, 则认为主线程前面的任务执行时间过长导致卡顿
                 if (timeOut) {
                     [LXDBacktraceLogger lxd_logMain];
                 }
             }
             else
             {
+                // 处理 Timer,Source,唤醒后事件
                 // 同步等待时间内,接收到信号result=0, 超时则继续往下执行并且result!=0
-                long result = dispatch_semaphore_wait([JJLagMonitor shared]->semaphore, dispatch_time(DISPATCH_TIME_NOW, OUT_TIME));
+                long result = dispatch_semaphore_wait([LagMonitor shared]->semaphore, dispatch_time(DISPATCH_TIME_NOW, OUT_TIME));
                 if (result != 0) { // 超时
-                    if (![JJLagMonitor shared]->observer) {
-                        [[JJLagMonitor shared] endMonitor];
+                    if (![LagMonitor shared]->observer) {
+                        [[LagMonitor shared] endMonitor];
                         continue;
                     }
-                    if ([JJLagMonitor shared]->currentActivity == kCFRunLoopBeforeSources ||
-                        [JJLagMonitor shared]->currentActivity == kCFRunLoopAfterWaiting  ||
-                        [JJLagMonitor shared]->currentActivity == kCFRunLoopBeforeTimers) {
+                    if ([LagMonitor shared]->currentActivity == kCFRunLoopBeforeSources ||
+                        [LagMonitor shared]->currentActivity == kCFRunLoopAfterWaiting  ||
+                        [LagMonitor shared]->currentActivity == kCFRunLoopBeforeTimers) {
                         
                         [LXDBacktraceLogger lxd_logMain];
                     }

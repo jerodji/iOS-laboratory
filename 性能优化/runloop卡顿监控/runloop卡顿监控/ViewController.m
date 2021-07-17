@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "JJLagMonitor.h"
+#import "LagMonitor.h"
 
 
 @interface ViewController ()
@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.systemPinkColor;
     
-    [[JJLagMonitor shared] beginMonitor];
+    [[LagMonitor shared] beginMonitor];
 }
 
 

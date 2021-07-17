@@ -14,7 +14,7 @@
 		FA8869C1269FD36E00AAC234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8869C0269FD36E00AAC234 /* Assets.xcassets */; };
 		FA8869C4269FD36E00AAC234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8869C2269FD36E00AAC234 /* LaunchScreen.storyboard */; };
 		FA8869C7269FD36E00AAC234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869C6269FD36E00AAC234 /* main.m */; };
-		FA8869D2269FD44200AAC234 /* JJLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869D1269FD44200AAC234 /* JJLagMonitor.m */; };
+		FA8869D2269FD44200AAC234 /* LagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8869D1269FD44200AAC234 /* LagMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		FA8869C3269FD36E00AAC234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8869C5269FD36E00AAC234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8869C6269FD36E00AAC234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA8869D0269FD44200AAC234 /* JJLagMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJLagMonitor.h; sourceTree = "<group>"; };
-		FA8869D1269FD44200AAC234 /* JJLagMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJLagMonitor.m; sourceTree = "<group>"; };
+		FA8869D0269FD44200AAC234 /* LagMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LagMonitor.h; sourceTree = "<group>"; };
+		FA8869D1269FD44200AAC234 /* LagMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LagMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				FA763ACB26A2DBB300E7254F /* Backtrace */,
-				FA8869D0269FD44200AAC234 /* JJLagMonitor.h */,
-				FA8869D1269FD44200AAC234 /* JJLagMonitor.m */,
+				FA8869D0269FD44200AAC234 /* LagMonitor.h */,
+				FA8869D1269FD44200AAC234 /* LagMonitor.m */,
 			);
 			path = LagMonitor;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			files = (
 				FA8869BC269FD36C00AAC234 /* ViewController.m in Sources */,
 				FA763ACE26A2DBB300E7254F /* LXDBacktraceLogger.m in Sources */,
-				FA8869D2269FD44200AAC234 /* JJLagMonitor.m in Sources */,
+				FA8869D2269FD44200AAC234 /* LagMonitor.m in Sources */,
 				FA8869B6269FD36C00AAC234 /* AppDelegate.m in Sources */,
 				FA8869C7269FD36E00AAC234 /* main.m in Sources */,
 			);
