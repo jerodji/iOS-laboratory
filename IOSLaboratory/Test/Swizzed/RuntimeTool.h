@@ -16,7 +16,7 @@
 + (void)simple_methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL;
 
 
-/// swizzling cls only, no affect to super class. but not the bese
+/// swizzling cls only, no affect to super class. but not the best
 + (void)better_methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL;
 
 
