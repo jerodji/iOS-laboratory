@@ -17,7 +17,9 @@
  执行用时：8 ms, 在所有 Swift 提交中击败了 99.63% 的用户
  内存消耗：13.8 MB, 在所有 Swift 提交中击败了 76.47% 的用户
  */
+let s = "4"
 class Solution {
+    let n = Int(s)
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
         if root == nil {return []}
         var res :[[Int]] = []

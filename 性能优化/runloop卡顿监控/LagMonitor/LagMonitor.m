@@ -8,10 +8,12 @@
 #import "LagMonitor.h"
 #import "LXDBacktraceLogger.h"
 
-// 定义延迟时间 毫秒
-static int64_t const OUT_TIME = 100 * NSEC_PER_MSEC;
+static double MAX_TIME = 0.02; // 20毫秒
+
+// 定义延迟时间 毫秒, 屏幕 60Hz,一帧16.67
+//static int64_t const OUT_TIME = MAX_TIME * NSEC_PER_MSEC;
 // before wait 的超时时间
-static NSTimeInterval const WAIT_TIME = 0.5;
+//static NSTimeInterval const WAIT_TIME = 0.01667;
 
 @interface LagMonitor () {
     @public
@@ -80,8 +82,8 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
                 dispatch_async(dispatch_get_main_queue(), ^{
                     timeOut = NO; // timeOut任务
                 });
-                [NSThread sleepForTimeInterval:WAIT_TIME];
-                // WAIT_TIME 时间后,如果 timeOut任务 任未执行, 则认为主线程前面的任务执行时间过长导致卡顿
+                [NSThread sleepForTimeInterval:MAX_TIME];
+                // MAX_TIME 时间后,如果 timeOut任务 任未执行, 则认为主线程前面的任务执行时间过长导致卡顿
                 if (timeOut) {
                     [LXDBacktraceLogger lxd_logMain];
                 }
@@ -90,8 +92,8 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
             {
                 // 处理 Timer,Source,唤醒后事件
                 // 同步等待时间内,接收到信号result=0, 超时则继续往下执行并且result!=0
-                long result = dispatch_semaphore_wait([LagMonitor shared]->semaphore, dispatch_time(DISPATCH_TIME_NOW, OUT_TIME));
-                if (result != 0) { // 超时
+                long result = dispatch_semaphore_wait([LagMonitor shared]->semaphore, dispatch_time(DISPATCH_TIME_NOW, MAX_TIME * NSEC_PER_SEC));
+                if (result != 0) { // result!=0,超时
                     if (![LagMonitor shared]->observer) {
                         [[LagMonitor shared] endMonitor];
                         continue;

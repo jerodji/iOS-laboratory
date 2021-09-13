@@ -33,16 +33,20 @@
 
 - (void)viewDidLoad2 {
     [super viewDidLoad];
-    NSLog(@"%s", __func__);
+    NSLog(@"2222");
+    self.view.backgroundColor = UIColor.greenColor;
+    [self viewDidLoad2];
 }
 - (void)viewDidLoad1 {
     [super viewDidLoad];
-    NSLog(@"%s", __func__);
+    NSLog(@"1111");
+    self.view.backgroundColor = UIColor.redColor;
+    [self viewDidLoad1];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%s", __func__);
+    NSLog(@"0000");
     self.view.backgroundColor = UIColor.lightGrayColor;
 }
 

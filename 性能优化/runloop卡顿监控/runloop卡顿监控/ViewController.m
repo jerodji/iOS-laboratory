@@ -34,7 +34,8 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
     NSLog(@"touchesBegan");
     
     // MARK: 正常的任务超时
-    [NSThread sleepForTimeInterval:0.5];
+    [NSThread sleepForTimeInterval:0.1];
+    [self task];
     
     // MARK: timer任务超时
 //    [NSTimer scheduledTimerWithTimeInterval:1 repeats:NO block:^(NSTimer * _Nonnull timer) {
@@ -54,6 +55,11 @@ static void runloopObserverCallback(CFRunLoopObserverRef observer, CFRunLoopActi
 //    static CFRunLoopObserverRef observer;
 //    observer = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopBeforeWaiting, YES, 0, &runloopObserverCallback, &context);
 //    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
+}
+
+- (void)task {
+    [NSThread sleepForTimeInterval:0.1];
+//    sleep(0.2);
 }
 
 

@@ -14,6 +14,7 @@
 		FA25F5C626DA1EC9000EDCBB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F5C526DA1EC9000EDCBB /* main.swift */; };
 		FA25F5D126DA330F000EDCBB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F5D026DA330F000EDCBB /* main.swift */; };
 		FA25F5DC26DB2074000EDCBB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F5DB26DB2074000EDCBB /* main.swift */; };
+		FA40194B26DCE6740092872A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA40194A26DCE6740092872A /* main.m */; };
 		FA44118A24F78C8D006AF23F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44118924F78C8D006AF23F /* main.m */; };
 		FA44119324F78D0F006AF23F /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44119124F78D0F006AF23F /* NSString+AES.m */; };
 		FA4E25D424E279910059E25B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4E25D324E279910059E25B /* main.m */; };
@@ -86,6 +87,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		FA25F5D726DB2074000EDCBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FA40194626DCE6740092872A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -210,6 +220,8 @@
 		FA25F5D026DA330F000EDCBB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FA25F5D926DB2074000EDCBB /* 二叉树层序遍历-广度优先搜索 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "二叉树层序遍历-广度优先搜索"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA25F5DB26DB2074000EDCBB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FA40194826DCE6740092872A /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA40194A26DCE6740092872A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA44118724F78C8D006AF23F /* AES */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AES; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44118924F78C8D006AF23F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA44119124F78D0F006AF23F /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
@@ -284,6 +296,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA25F5D626DB2074000EDCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA40194526DCE6740092872A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,6 +445,14 @@
 			path = "二叉树层序遍历-广度优先搜索";
 			sourceTree = "<group>";
 		};
+		FA40194926DCE6740092872A /* block */ = {
+			isa = PBXGroup;
+			children = (
+				FA40194A26DCE6740092872A /* main.m */,
+			);
+			path = block;
+			sourceTree = "<group>";
+		};
 		FA44118824F78C8D006AF23F /* AES */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +487,7 @@
 				FA25F5C426DA1EC9000EDCBB /* 岛屿数量-深度优先搜搜 */,
 				FA25F5CF26DA330F000EDCBB /* 字符串解码 */,
 				FA25F5DA26DB2074000EDCBB /* 二叉树层序遍历-广度优先搜索 */,
+				FA40194926DCE6740092872A /* block */,
 				FA4E25D124E279910059E25B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -485,6 +513,7 @@
 				FA25F5C326DA1EC9000EDCBB /* 岛屿数量-深度优先搜搜 */,
 				FA25F5CE26DA330E000EDCBB /* 字符串解码 */,
 				FA25F5D926DB2074000EDCBB /* 二叉树层序遍历-广度优先搜索 */,
+				FA40194826DCE6740092872A /* block */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -698,6 +727,23 @@
 			name = "二叉树层序遍历-广度优先搜索";
 			productName = "二叉树层序遍历-广度优先搜索";
 			productReference = FA25F5D926DB2074000EDCBB /* 二叉树层序遍历-广度优先搜索 */;
+			productType = "com.apple.product-type.tool";
+		};
+		FA40194726DCE6740092872A /* block */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA40194E26DCE6740092872A /* Build configuration list for PBXNativeTarget "block" */;
+			buildPhases = (
+				FA40194426DCE6740092872A /* Sources */,
+				FA40194526DCE6740092872A /* Frameworks */,
+				FA40194626DCE6740092872A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = block;
+			productName = block;
+			productReference = FA40194826DCE6740092872A /* block */;
 			productType = "com.apple.product-type.tool";
 		};
 		FA44118624F78C8D006AF23F /* AES */ = {
@@ -918,6 +964,9 @@
 					FA25F5D826DB2074000EDCBB = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					FA40194726DCE6740092872A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					FA44118624F78C8D006AF23F = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -984,6 +1033,7 @@
 				FA25F5C226DA1EC8000EDCBB /* 岛屿数量-深度优先搜搜 */,
 				FA25F5CD26DA330E000EDCBB /* 字符串解码 */,
 				FA25F5D826DB2074000EDCBB /* 二叉树层序遍历-广度优先搜索 */,
+				FA40194726DCE6740092872A /* block */,
 			);
 		};
 /* End PBXProject section */
@@ -1042,6 +1092,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA25F5DC26DB2074000EDCBB /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA40194426DCE6740092872A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA40194B26DCE6740092872A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1338,6 +1396,30 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FA40194C26DCE6740092872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T49233388V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA40194D26DCE6740092872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T49233388V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1788,6 +1870,15 @@
 			buildConfigurations = (
 				FA25F5DE26DB2074000EDCBB /* Debug */,
 				FA25F5DF26DB2074000EDCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA40194E26DCE6740092872A /* Build configuration list for PBXNativeTarget "block" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA40194C26DCE6740092872A /* Debug */,
+				FA40194D26DCE6740092872A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
