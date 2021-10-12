@@ -15,6 +15,7 @@
 		FA6CE13024EB63B7000EC2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6CE12F24EB63B7000EC2CB /* main.m */; };
 		FAA0CBBA2638122D00A24A1A /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA0CBB02638112000A24A1A /* AESCipher.m */; };
 		FADED75B2508BE02000B3E3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FADED75A2508BE02000B3E3F /* main.m */; };
+		FE8782A82715888C0005E1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8782A72715888C0005E1A6 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +64,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		FE8782A32715888C0005E1A6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +92,8 @@
 		FAA0CBB12638112000A24A1A /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
 		FADED7582508BE02000B3E3F /* 数组排序 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "数组排序"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADED75A2508BE02000B3E3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE8782A52715888C0005E1A6 /* copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = copy; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE8782A72715888C0005E1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE8782A22715888C0005E1A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -152,6 +171,7 @@
 				FA44118824F78C8D006AF23F /* AES */,
 				FADED7592508BE02000B3E3F /* 数组排序 */,
 				FA18141A26468F9E00D6DB3D /* 内存管理 */,
+				FE8782A62715888C0005E1A6 /* copy */,
 				FA4E25D124E279910059E25B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +184,7 @@
 				FA44118724F78C8D006AF23F /* AES */,
 				FADED7582508BE02000B3E3F /* 数组排序 */,
 				FA18141926468F9E00D6DB3D /* 内存管理 */,
+				FE8782A52715888C0005E1A6 /* copy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +220,14 @@
 				FADED75A2508BE02000B3E3F /* main.m */,
 			);
 			path = "数组排序";
+			sourceTree = "<group>";
+		};
+		FE8782A62715888C0005E1A6 /* copy */ = {
+			isa = PBXGroup;
+			children = (
+				FE8782A72715888C0005E1A6 /* main.m */,
+			);
+			path = copy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +318,23 @@
 			productReference = FADED7582508BE02000B3E3F /* 数组排序 */;
 			productType = "com.apple.product-type.tool";
 		};
+		FE8782A42715888C0005E1A6 /* copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE8782AB2715888C0005E1A6 /* Build configuration list for PBXNativeTarget "copy" */;
+			buildPhases = (
+				FE8782A12715888C0005E1A6 /* Sources */,
+				FE8782A22715888C0005E1A6 /* Frameworks */,
+				FE8782A32715888C0005E1A6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = copy;
+			productName = copy;
+			productReference = FE8782A52715888C0005E1A6 /* copy */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -313,6 +359,9 @@
 					FADED7572508BE02000B3E3F = {
 						CreatedOnToolsVersion = 11.7;
 					};
+					FE8782A42715888C0005E1A6 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 				};
 			};
 			buildConfigurationList = FA4E25CB24E279910059E25B /* Build configuration list for PBXProject "CodeDemo" */;
@@ -333,6 +382,7 @@
 				FA44118624F78C8D006AF23F /* AES */,
 				FADED7572508BE02000B3E3F /* 数组排序 */,
 				FA18141826468F9E00D6DB3D /* 内存管理 */,
+				FE8782A42715888C0005E1A6 /* copy */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +428,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADED75B2508BE02000B3E3F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE8782A12715888C0005E1A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE8782A82715888C0005E1A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +637,28 @@
 			};
 			name = Release;
 		};
+		FE8782A92715888C0005E1A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE8782AA2715888C0005E1A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,6 +712,15 @@
 			buildConfigurations = (
 				FADED75C2508BE02000B3E3F /* Debug */,
 				FADED75D2508BE02000B3E3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE8782AB2715888C0005E1A6 /* Build configuration list for PBXNativeTarget "copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE8782A92715888C0005E1A6 /* Debug */,
+				FE8782AA2715888C0005E1A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
