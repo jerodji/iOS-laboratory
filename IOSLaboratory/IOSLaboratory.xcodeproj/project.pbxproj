@@ -518,20 +518,20 @@
 		FA281686263A581100402BA7 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				FA281687263A581100402BA7 /* AFSecurityPolicy.h */,
-				FA281688263A581100402BA7 /* AFNetworkReachabilityManager.h */,
-				FA281689263A581100402BA7 /* AFURLSessionManager.h */,
-				FA28168A263A581100402BA7 /* AFURLRequestSerialization.h */,
-				FA28168B263A581100402BA7 /* AFURLResponseSerialization.m */,
-				FA28168C263A581100402BA7 /* AFHTTPSessionManager.m */,
-				FA28168D263A581100402BA7 /* AFURLResponseSerialization.h */,
-				FA28168E263A581100402BA7 /* AFURLSessionManager.m */,
-				FA28168F263A581100402BA7 /* AFURLRequestSerialization.m */,
 				FA281690263A581100402BA7 /* AFNetworking.h */,
-				FA281691263A581100402BA7 /* AFNetworkReachabilityManager.m */,
-				FA281692263A581100402BA7 /* AFSecurityPolicy.m */,
 				FA281693263A581100402BA7 /* AFCompatibilityMacros.h */,
+				FA281689263A581100402BA7 /* AFURLSessionManager.h */,
+				FA28168E263A581100402BA7 /* AFURLSessionManager.m */,
 				FA281694263A581100402BA7 /* AFHTTPSessionManager.h */,
+				FA28168C263A581100402BA7 /* AFHTTPSessionManager.m */,
+				FA28168A263A581100402BA7 /* AFURLRequestSerialization.h */,
+				FA28168F263A581100402BA7 /* AFURLRequestSerialization.m */,
+				FA28168D263A581100402BA7 /* AFURLResponseSerialization.h */,
+				FA28168B263A581100402BA7 /* AFURLResponseSerialization.m */,
+				FA281688263A581100402BA7 /* AFNetworkReachabilityManager.h */,
+				FA281691263A581100402BA7 /* AFNetworkReachabilityManager.m */,
+				FA281687263A581100402BA7 /* AFSecurityPolicy.h */,
+				FA281692263A581100402BA7 /* AFSecurityPolicy.m */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
