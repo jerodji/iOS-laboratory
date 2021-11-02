@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "========== 准备提交 iOS-laboratory ==========="
+echo ""
+echo "▶️ 准备提交 iOS-laboratory ......"
 cd ~/Documents/repositories/iOS-laboratory
 git pull
 git add .
@@ -8,4 +9,4 @@ git add .
 # git commit -m "$MSG"
 git commit -m "update"
 git push
-echo "=========== iOS-laboratory 提交完成 =========="
+echo "✅ 提交完成 iOS-laboratory "
