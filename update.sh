@@ -1,7 +1,7 @@
 #!/bin/bash
 echo ""
-echo "▶️ 准备提交 iOS-laboratory ......"
-cd ~/Documents/repositories/iOS-laboratory
+echo "▶️  准备提交 iOS-laboratory ......"
+cd ~/Desktop/repositories/iOS-laboratory
 git pull
 git add .
 # echo "请输入提交信息"
