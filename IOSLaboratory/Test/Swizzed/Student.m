@@ -15,7 +15,7 @@
     dispatch_once(&onceToken, ^{
 //        [RuntimeTool simple_methodSwizzlingWithClass:self oriSEL:@selector(foo) swiSEL:@selector(euu)];
 //        [RuntimeTool better_methodSwizzlingWithClass:self oriSEL:@selector(foo) swiSEL:@selector(euu)];
-        [RuntimeTool swizzlingInstanceMethodWithClass:self originSEL:@selector(foo) swizzleSEL:@selector(euu)];
+        [RuntimeTool swizzlingInstanceMethodWithClass:self originSEL:@selector(foo) swizzleSEL:@selector(euu) force:YES];
     });
 }
 
