@@ -48,7 +48,7 @@
 // }
 
 
-// MARK: 交换实例方法
+// MARK: exchange instance method
 
 + (void)swizzlingInstanceMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL
 {
@@ -58,7 +58,7 @@
 + (void)swizzlingInstanceMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL force:(BOOL)isForce
 {
     if (!cls) {
-        NSLog(@"⚠️ swizzling: Class can't be nil : %s", __func__);
+        NSLog(@"swizzling: ❌ Class can't be nil : %s", __func__);
         //NSAssert(NO, @"swizzling: ❌ Class can't be nil : %s", __func__);
         return;
     }
@@ -66,29 +66,87 @@
     Method oriMethod = class_getInstanceMethod(cls, oriSEL);
     Method swiMethod = class_getInstanceMethod(cls, swiSEL);
     
-    if (!oriMethod && !swiMethod) {
-        NSLog(@"⚠️ swizzling: 2个方法都不存在,无法交换");
+    [self _exchangeWithClass:cls originSEL:oriSEL originMethod:oriMethod swizzleSEL:swiSEL swizzleMethod:swiMethod force:isForce flag:@"-"];
+}
+
+
+// MARK: exchange class method
+
++ (void)swizzlingClassMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL
+{
+    [self swizzlingClassMethodWithClass:cls originSEL:oriSEL swizzleSEL:swiSEL force:YES];
+}
+
++ (void)swizzlingClassMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL force:(BOOL)isForce
+{
+    if (!cls) {
+        NSLog(@"swizzling: ❌ Class can't be nil : %s", __func__);
+        //NSAssert(NO, @"swizzling: ❌ Class can't be nil : %s", __func__);
         return;
-        
-    } else if (oriMethod && !swiMethod) {
+    }
+    
+    Method oriMethod = class_getClassMethod(cls, oriSEL);
+    Method swiMethod = class_getClassMethod(cls, swiSEL);
+    
+    const char * metaName = NSStringFromClass(cls).UTF8String;
+    Class metaClass = objc_getMetaClass(metaName);
+    
+    [self _exchangeWithClass:metaClass originSEL:oriSEL originMethod:oriMethod swizzleSEL:swiSEL swizzleMethod:swiMethod force:isForce flag:@"+"];
+}
+
+// MARK: exchange method
++ (void)_exchangeWithClass:(Class)cls
+                 originSEL:(SEL)oriSEL originMethod:(Method)oriMethod
+                swizzleSEL:(SEL)swiSEL swizzleMethod:(Method)swiMethod
+                     force:(BOOL)isForce
+                      flag:(NSString*)flag
+{
+    if (!cls) {
+        NSLog(@"swizzling: ❌ Class can't be nil.");
+        //NSAssert(NO, @"swizzling: ❌ Class can't be nil : %s", __func__);
+        return;
+    }
+    if (!oriSEL) {
+        NSLog(@"swizzling: ❌ origin SEL can't be nil.");
+        return;
+    }
+    if (!swiSEL) {
+        NSLog(@"swizzling: ❌ swizzle SEL can't be nil.");
+        return;
+    }
+    
+    
+    NSString * oriDesc = [NSString stringWithFormat:@"%@[%@ %@]", flag, NSStringFromClass(cls), NSStringFromSelector(oriSEL)];
+    NSString * swiDesc = [NSString stringWithFormat:@"%@[%@ %@]", flag, NSStringFromClass(cls), NSStringFromSelector(swiSEL)];
+    
+    if (!oriMethod && !swiMethod)
+    {
+        NSLog(@"swizzling: ❌ 2个方法都不存在,无法交换: %@, %@", oriDesc, swiDesc);
+        return;
+    }
+    else if (oriMethod && !swiMethod)
+    {
         if (!isForce) {
-            NSLog(@"%@ 中 方法 %@ 不存在, 没有进行交换", NSStringFromClass(cls), NSStringFromSelector(swiSEL));
+            NSLog(@"swizzling: %@ 不存在, 没有进行交换", swiDesc);
             return;
         }
+        
         class_addMethod(cls, swiSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
         method_setImplementation(oriMethod, imp_implementationWithBlock(^(id self, SEL _cmd) {
-            NSLog(@"swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(swiSEL));
+            NSLog(@"swizzling: %@ 不存在. 这是默认空实现", swiDesc);
         }));
         return;
-        
-    } else if (!oriMethod && swiMethod) {
+    }
+    else if (!oriMethod && swiMethod)
+    {
         if (!isForce) {
-            NSLog(@"%@ 中 方法 %@ 不存在, 没有进行交换", NSStringFromClass(cls), NSStringFromSelector(oriSEL));
+            NSLog(@"swizzling: %@ 不存在, 没有进行交换", oriDesc);
             return;
         }
+        
         class_addMethod(cls, oriSEL, method_getImplementation(swiMethod), method_getTypeEncoding(swiMethod));
         method_setImplementation(swiMethod, imp_implementationWithBlock(^(id self, SEL _cmd) {
-            NSLog(@"swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(oriSEL));
+            NSLog(@"swizzling: %@ 不存在. 这是默认空实现", oriDesc);
         }));
         return;
     }
@@ -97,33 +155,22 @@
     // return YES if the method was added successfully, otherwise NO (for example, the class already contains a method with that name).
     // SEL 与 IMP 一一对应, 多个 SEL 可以对应同一个 IMP.
     BOOL success = class_addMethod(cls, oriSEL, method_getImplementation(swiMethod), method_getTypeEncoding(swiMethod));
-    NSLog(@"swizzling: class %@ add SEL:%@ to IMP:%@", NSStringFromClass(cls), NSStringFromSelector(oriSEL), NSStringFromSelector(swiSEL));
     
     if (success) {
+        NSLog(@"swizzling: class %@ add SEL:%@ to IMP:%@", NSStringFromClass(cls), NSStringFromSelector(oriSEL), NSStringFromSelector(swiSEL));
+        
         // cls replace swiSEL to oriIMP
         class_replaceMethod(cls, swiSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
 
         NSLog(@"swizzling: class %@ replace SEL:%@ to IMP:%@", NSStringFromClass(cls), NSStringFromSelector(swiSEL), NSStringFromSelector(oriSEL));
+        
     } else {
+        
         method_exchangeImplementations(oriMethod, swiMethod);
         
         NSLog(@"swizzling: class %@ exchange %@ and %@", NSStringFromClass(cls), NSStringFromSelector(oriSEL), NSStringFromSelector(swiSEL));
     }
     
 }
-
-
-// MARK: 交换类方法
-
-+ (void)swizzlingClassMethodWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL
-{
-    [self swizzlingInstanceMethodWithClass:cls originSEL:oriSEL swizzleSEL:swiSEL force:YES];
-}
-
-+ (void)swizzlingClassMethodWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL force:(BOOL)isForce
-{
-    
-}
-
 
 @end

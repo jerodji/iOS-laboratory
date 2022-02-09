@@ -13,6 +13,7 @@
 
 - (void)foo;
 
++ (void)bar1;
 
 @end
 

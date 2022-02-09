@@ -9,8 +9,12 @@
 
 @implementation Person
 
-//- (void)foo {
-//    NSLog(@"Person foo");
-//}
+- (void)foo {
+    NSLog(@"Person foo");
+}
+
++ (void)bar1 {
+    NSLog(@"Person bar1");
+}
 
 @end
