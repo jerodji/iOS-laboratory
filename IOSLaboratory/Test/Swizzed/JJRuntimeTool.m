@@ -5,12 +5,13 @@
 //  Created by Jerod on 2021/6/23.
 //
 
-#import "RuntimeTool.h"
+#import "JJRuntimeTool.h"
 #import <objc/runtime.h>
 
 
-@implementation RuntimeTool
+@implementation JJRuntimeTool
 
+/// exchange super's imp also, it's not you expected.
 //+ (void)simple_methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL
 //{
 //    if (!cls) {
@@ -26,6 +27,7 @@
 //}
 
 
+/// swizzling cls only, no affect to super class. but not the best
 // + (void)better_methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL
 // {
 //     if (!cls) {
@@ -46,6 +48,12 @@
 // }
 
 
+// MARK: 交换实例方法
+
++ (void)swizzlingInstanceMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL
+{
+    [self swizzlingInstanceMethodWithClass:cls originSEL:oriSEL swizzleSEL:swiSEL force:YES];
+}
 
 + (void)swizzlingInstanceMethodWithClass:(Class)cls originSEL:(SEL)oriSEL swizzleSEL:(SEL)swiSEL force:(BOOL)isForce
 {
@@ -69,7 +77,7 @@
         }
         class_addMethod(cls, swiSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
         method_setImplementation(oriMethod, imp_implementationWithBlock(^(id self, SEL _cmd) {
-            NSLog(@"⚠️ swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(swiSEL));
+            NSLog(@"swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(swiSEL));
         }));
         return;
         
@@ -80,7 +88,7 @@
         }
         class_addMethod(cls, oriSEL, method_getImplementation(swiMethod), method_getTypeEncoding(swiMethod));
         method_setImplementation(swiMethod, imp_implementationWithBlock(^(id self, SEL _cmd) {
-            NSLog(@"⚠️ swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(oriSEL));
+            NSLog(@"swizzling: %@ 类中 %@ 方法不存在. 这是默认空实现", NSStringFromClass(cls), NSStringFromSelector(oriSEL));
         }));
         return;
     }
@@ -105,9 +113,17 @@
 }
 
 
+// MARK: 交换类方法
+
 + (void)swizzlingClassMethodWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL
+{
+    [self swizzlingInstanceMethodWithClass:cls originSEL:oriSEL swizzleSEL:swiSEL force:YES];
+}
+
++ (void)swizzlingClassMethodWithClass:(Class)cls oriSEL:(SEL)oriSEL swiSEL:(SEL)swiSEL force:(BOOL)isForce
 {
     
 }
+
 
 @end

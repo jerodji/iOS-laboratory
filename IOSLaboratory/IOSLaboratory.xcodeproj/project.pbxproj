@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA1CC3022682E85100CF5934 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC3012682E85100CF5934 /* Person.m */; };
 		FA1CC3082682E90200CF5934 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC3072682E90200CF5934 /* Student.m */; };
-		FA1CC30E2682EA5E00CF5934 /* RuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */; };
+		FA1CC30E2682EA5E00CF5934 /* JJRuntimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CC30D2682EA5E00CF5934 /* JJRuntimeTool.m */; };
 		FA25E681265DE54800464050 /* ThreadLock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25E680265DE54800464050 /* ThreadLock.m */; };
 		FA281629263A535000402BA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA281628263A535000402BA7 /* AppDelegate.m */; };
 		FA28162C263A535000402BA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28162B263A535000402BA7 /* SceneDelegate.m */; };
@@ -149,8 +149,8 @@
 		FA1CC3012682E85100CF5934 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		FA1CC3062682E90200CF5934 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		FA1CC3072682E90200CF5934 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
-		FA1CC30C2682EA5E00CF5934 /* RuntimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTool.h; sourceTree = "<group>"; };
-		FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTool.m; sourceTree = "<group>"; };
+		FA1CC30C2682EA5E00CF5934 /* JJRuntimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJRuntimeTool.h; sourceTree = "<group>"; };
+		FA1CC30D2682EA5E00CF5934 /* JJRuntimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJRuntimeTool.m; sourceTree = "<group>"; };
 		FA25E67F265DE54800464050 /* ThreadLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadLock.h; sourceTree = "<group>"; };
 		FA25E680265DE54800464050 /* ThreadLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadLock.m; sourceTree = "<group>"; };
 		FA281624263A535000402BA7 /* IOSLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -413,8 +413,8 @@
 				FA1CC3012682E85100CF5934 /* Person.m */,
 				FA1CC3062682E90200CF5934 /* Student.h */,
 				FA1CC3072682E90200CF5934 /* Student.m */,
-				FA1CC30C2682EA5E00CF5934 /* RuntimeTool.h */,
-				FA1CC30D2682EA5E00CF5934 /* RuntimeTool.m */,
+				FA1CC30C2682EA5E00CF5934 /* JJRuntimeTool.h */,
+				FA1CC30D2682EA5E00CF5934 /* JJRuntimeTool.m */,
 			);
 			path = Swizzed;
 			sourceTree = "<group>";
@@ -1030,7 +1030,7 @@
 				FA281775263A5C6500402BA7 /* SDWebImageError.m in Sources */,
 				FA28178D263A5C6500402BA7 /* SDWebImageDefine.m in Sources */,
 				FA64CF66264B6C19000B9FDB /* DispatchTest.m in Sources */,
-				FA1CC30E2682EA5E00CF5934 /* RuntimeTool.m in Sources */,
+				FA1CC30E2682EA5E00CF5934 /* JJRuntimeTool.m in Sources */,
 				FA1CC3022682E85100CF5934 /* Person.m in Sources */,
 				FA281796263A5C6500402BA7 /* SDImageAssetManager.m in Sources */,
 				FA2816A2263A581100402BA7 /* AFURLSessionManager.m in Sources */,

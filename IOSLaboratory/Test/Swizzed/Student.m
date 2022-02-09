@@ -6,7 +6,7 @@
 //
 
 #import "Student.h"
-#import "RuntimeTool.h"
+#import "JJRuntimeTool.h"
 
 @implementation Student
 
@@ -15,7 +15,7 @@
     dispatch_once(&onceToken, ^{
 //        [RuntimeTool simple_methodSwizzlingWithClass:self oriSEL:@selector(foo) swiSEL:@selector(euu)];
 //        [RuntimeTool better_methodSwizzlingWithClass:self oriSEL:@selector(foo) swiSEL:@selector(euu)];
-        [RuntimeTool swizzlingInstanceMethodWithClass:self originSEL:@selector(foo) swizzleSEL:@selector(euu) force:YES];
+        [JJRuntimeTool swizzlingInstanceMethodWithClass:self originSEL:@selector(foo) swizzleSEL:@selector(euu) force:YES];
     });
 }
 
@@ -27,6 +27,8 @@
 - (void)euu {
     NSLog(@"Student euu");
 //    [self euu];
+    
+    
 }
 
 @end
